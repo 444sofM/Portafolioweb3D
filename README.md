@@ -37,3 +37,10 @@ gestion-proyecto/ # Product Backlog, Sprint Backlog y DoD
 
 ## Gestión
 Scrum + Kanban en Taiga. Ver [gestion-proyecto/](gestion-proyecto/).
+
+## Despliegue (HT-07 / HU-22)
+El workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml) compila y publica en **GitHub Pages** en cada push a `main`.
+
+Configuración única en GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+URL pública: `https://<usuario>.github.io/<repositorio>/` (actualizar aquí cuando esté activa).
