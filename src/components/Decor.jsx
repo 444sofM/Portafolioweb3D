@@ -3,6 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { terrainHeight } from './Terrain.jsx'
 import { starShape } from './shapes.js'
+import InteractiveProps from './InteractiveProps.jsx'
 
 const PINK = '#ff7eb6'
 const WHITE = '#ffffff'
@@ -140,19 +141,21 @@ function Floatie({ x, z, color = PINK, phase = 0 }) {
   )
 }
 
-export default function Decor() {
+export default function Decor({ activeId, onSelect }) {
   return (
     <>
-      <Placed x={-9} z={-6}><Umbrella /></Placed>
-      <Placed x={9} z={-1} rotY={1}><Umbrella colors={['#b794f6', WHITE]} /></Placed>
-      <Placed x={-2} z={9} rotY={2}><Umbrella colors={['#ffb36b', WHITE]} /></Placed>
+      <InteractiveProps activeId={activeId} onSelect={onSelect} />
 
-      <Placed x={-7.6} z={-4.2} rotY={0.5}><Towel /></Placed>
-      <Placed x={7.6} z={-2.4} rotY={-0.4}><Towel colors={['#b794f6', WHITE]} /></Placed>
-      <Placed x={0.4} z={7.2} rotY={0.2}><Towel colors={['#ffb36b', WHITE]} /></Placed>
+      <Placed x={-11} z={-6}><Umbrella /></Placed>
+      <Placed x={12} z={0.5} rotY={1}><Umbrella colors={['#b794f6', WHITE]} /></Placed>
+      <Placed x={-5} z={9.5} rotY={2}><Umbrella colors={['#ffb36b', WHITE]} /></Placed>
 
-      <Placed x={3} z={1.5}><BeachBall /></Placed>
-      <Placed x={-5} z={-9.5}><BeachBall radius={0.45} /></Placed>
+      <Placed x={-9.4} z={-4.4} rotY={0.5}><Towel /></Placed>
+      <Placed x={10.4} z={-0.8} rotY={-0.4}><Towel colors={['#b794f6', WHITE]} /></Placed>
+      <Placed x={-3.4} z={8} rotY={0.2}><Towel colors={['#ffb36b', WHITE]} /></Placed>
+
+      <Placed x={2} z={-1}><BeachBall /></Placed>
+      <Placed x={-8} z={-9}><BeachBall radius={0.45} /></Placed>
 
       <Placed x={-1.5} z={-1.5} rotY={0.4}><Starfish /></Placed>
       <Placed x={10.5} z={6} rotY={1.2}><Starfish color="#ffb36b" /></Placed>
@@ -160,8 +163,8 @@ export default function Decor() {
       <Placed x={4.5} z={-10.5} rotY={0.9}><Starfish color="#ffd1a6" /></Placed>
       <Placed x={12.2} z={-4} rotY={0.1} scale={0.8}><Starfish color="#ff9b85" /></Placed>
 
-      <Placed x={-3.8} z={3.2}><Cocktail /></Placed>
-      <Placed x={6.2} z={-6.6} rotY={1}><Cocktail /></Placed>
+      <Placed x={-4} z={-2}><Cocktail /></Placed>
+      <Placed x={11} z={-5} rotY={1}><Cocktail /></Placed>
 
       <Floatie x={19} z={5} />
       <Floatie x={-18} z={-8} color="#b794f6" phase={2} />

@@ -30,6 +30,17 @@ docs/            # arquitectura y wireframes
 gestion-proyecto/ # Product Backlog, Sprint Backlog y DoD
 ```
 
+## Personalizar el contenido
+Edita [src/data/content.js](src/data/content.js): textos de "Sobre mí", experiencia, habilidades, proyectos (con sus enlaces) y contacto. Cada objeto de la isla abre su panel:
+
+| Objeto | Panel |
+|---|---|
+| Polvera con espejo | Sobre mí |
+| Perfume | Experiencia |
+| Paleta de sombras | Habilidades |
+| Bolso | Proyectos |
+| Sombrero de playa | Contacto |
+
 ## Convenciones
 - Componentes React: `PascalCase.jsx`; hooks: `useCamelCase.js`.
 - Assets 3D en `.glb` (Draco/Meshopt) dentro de `src/assets/models`.

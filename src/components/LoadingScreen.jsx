@@ -10,12 +10,13 @@ export default function LoadingScreen({ onEnter, entered, sceneReady }) {
   return (
     <div className={`loading ${entered ? 'loading--hidden' : ''}`} aria-hidden={entered}>
       <div className="loading__card">
-        <h1>Portafolio 3D · Isla Interactiva</h1>
+        <h1>Mi Isla Chic · Portafolio 3D</h1>
         <p className="loading__subtitle">Explora la isla para conocer mi trabajo.</p>
 
         <ul className="loading__controls">
           <li><strong>Arrastrar</strong> con el mouse: rotar la cámara</li>
           <li><strong>Rueda</strong>: acercar / alejar</li>
+          <li><strong>Clic</strong> en los objetos: conoce mi perfil y mis proyectos</li>
         </ul>
 
         <div className="loading__bar" role="progressbar" aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100}>

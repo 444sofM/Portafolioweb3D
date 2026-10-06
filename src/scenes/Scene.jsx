@@ -1,17 +1,18 @@
 import { Environment, Lightformer, OrbitControls, Sparkles } from '@react-three/drei'
 import Island from './Island.jsx'
+import { LabelProjector } from '../components/Labels.jsx'
 
-export default function Scene() {
+export default function Scene({ activeId, onSelect }) {
   return (
     <>
       <color attach="background" args={['#cdeefe']} />
       <fog attach="fog" args={['#cdeefe', 55, 130]} />
 
-      <hemisphereLight args={['#fff4fa', '#f7c9a6', 0.9]} />
+      <hemisphereLight args={['#fff4fa', '#f7c9a6', 0.55]} />
       <directionalLight
         castShadow
         position={[18, 26, 12]}
-        intensity={2.4}
+        intensity={1.7}
         color="#fff1e0"
         shadow-mapSize={[2048, 2048]}
         shadow-camera-left={-24}
@@ -25,13 +26,14 @@ export default function Scene() {
       />
 
       {/* Entorno sin descargas externas: da reflejos a metales y espejos */}
-      <Environment resolution={256} environmentIntensity={0.7}>
+      <Environment resolution={256} environmentIntensity={0.8}>
         <Lightformer form="rect" intensity={3} color="#fff" position={[0, 8, -6]} scale={[20, 6, 1]} />
         <Lightformer form="rect" intensity={2} color="#ffd1e6" position={[-8, 3, 6]} scale={[10, 6, 1]} />
         <Lightformer form="rect" intensity={2} color="#cfeaff" position={[8, 3, 6]} scale={[10, 6, 1]} />
       </Environment>
 
-      <Island />
+      <Island activeId={activeId} onSelect={onSelect} />
+      <LabelProjector />
       <Sparkles count={70} scale={[34, 7, 34]} position-y={4} size={4} speed={0.3} color="#ffc2dd" />
 
       <OrbitControls

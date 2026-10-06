@@ -13,12 +13,16 @@ flowchart TD
   App --> Canvas[Canvas R3F]
   App --> LoadingScreen[LoadingScreen HTML]
   Canvas --> Scene
-  Scene --> Lights[Luces]
+  App --> LabelsOverlay[Etiquetas DOM]
+  App --> ZonePanel[Panel de información]
+  Scene --> Lights[Luces + sombras]
   Scene --> OrbitControls
+  Scene --> LabelProjector[Proyecta etiquetas 3D a 2D]
   Scene --> Island
   Island --> Terrain
   Island --> Water
-  Island --> Vegetation
+  Island --> Decor[Sombrillas, toallas, flotadores...]
+  Decor --> InteractiveProps[Polvera, perfume, paleta, bolso, sombrero]
 ```
 
 ## Flujo de carga
@@ -40,5 +44,7 @@ sequenceDiagram
 |---|---|
 | Vite + R3F | Arranque rápido, componentes declarativos |
 | `base: './'` en Vite | Rutas relativas válidas en cualquier hosting |
-| Terreno procedural (Sprint 1) | Isla provisional hasta tener el modelo de Blender (Sprint 2) |
-| Vegetación con semilla fija | La isla se ve igual en cada carga |
+| Terreno procedural, estilo playa (Sprint 1) | Isla provisional hasta tener el modelo de Blender (Sprint 2) |
+| Etiquetas DOM proyectadas (no drei `Html`) | `Html` lanza errores de React 19 al desmontar su root |
+| Contenido en `src/data/content.js` | Editar la información sin tocar componentes 3D |
+| Shadow map `percentage` | `soft` (PCFSoft) fue removido de Three r18x |
