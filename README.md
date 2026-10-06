@@ -1,4 +1,4 @@
-﻿# Portafolio Web 3D — Isla Interactiva
+# Portafolio Web 3D — Isla Interactiva
 
 Portafolio profesional en 3D: una isla explorable construida con React Three Fiber (Three.js) + Vite.
 
