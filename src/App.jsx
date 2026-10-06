@@ -10,7 +10,8 @@ export default function App() {
   return (
     <>
       <Canvas
-        camera={{ position: [12, 9, 12], fov: 50, near: 0.1, far: 200 }}
+        shadows="percentage"
+        camera={{ position: [24, 16, 24], fov: 50, near: 0.1, far: 300 }}
         dpr={[1, 2]}
         onCreated={() => setSceneReady(true)}
       >
