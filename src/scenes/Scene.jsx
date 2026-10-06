@@ -1,4 +1,5 @@
 import { OrbitControls } from '@react-three/drei'
+import Island from './Island.jsx'
 
 export default function Scene() {
   return (
@@ -6,11 +7,7 @@ export default function Scene() {
       <color attach="background" args={['#87ceeb']} />
       <ambientLight intensity={0.8} />
       <directionalLight position={[10, 15, 5]} intensity={1.5} />
-
-      <mesh rotation-x={-Math.PI / 2}>
-        <circleGeometry args={[6, 48]} />
-        <meshStandardMaterial color="#e8d8a0" />
-      </mesh>
+      <Island />
 
       <OrbitControls
         target={[0, 0, 0]}
