@@ -18,7 +18,7 @@ export default function Interactive({
   const [hovered, setHovered] = useState(false)
 
   useFrame((_, dt) => {
-    const target = (hovered || active ? 1.08 : 1) * scale
+    const target = (hovered || active ? 1.04 : 1) * scale
     body.current.scale.setScalar(THREE.MathUtils.damp(body.current.scale.x, target, 8, dt))
   })
 

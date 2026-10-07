@@ -15,7 +15,7 @@ export default function App() {
     <>
       <Canvas
         shadows="percentage"
-        camera={{ position: [17, 12, 17], fov: 50, near: 0.1, far: 300 }}
+        camera={{ position: [15, 10.5, 15], fov: 50, near: 0.1, far: 400 }}
         dpr={[1, 2]}
         onCreated={() => setSceneReady(true)}
         onPointerMissed={closePanel}

@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
-import { ITEMS } from './InteractiveProps.jsx'
+import { ZONES } from '../data/layout.js'
 import { terrainHeight } from './Terrain.jsx'
 import { zones } from '../data/content.js'
 
-const anchors = ITEMS.map((it) => ({
+const anchors = ZONES.map((it) => ({
   id: it.id,
-  position: new THREE.Vector3(it.x, terrainHeight(it.x, it.z) + it.labelY, it.z),
+  position: new THREE.Vector3(it.x, terrainHeight(it.x, it.z) + it.labelY * it.scale, it.z),
 }))
 
 // Elementos DOM de las etiquetas, registrados por LabelsOverlay y movidos por LabelProjector.
@@ -25,7 +25,7 @@ export function LabelsOverlay({ activeId, onSelect }) {
           className={`chip ${activeId === id ? 'chip--active' : ''}`}
           onClick={() => onSelect(id)}
         >
-          {zones[id].label}
+          {zones[id].icon} {zones[id].label}
         </button>
       ))}
     </div>

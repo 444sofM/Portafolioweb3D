@@ -2,6 +2,7 @@
 export const zones = {
   about: {
     label: 'Sobre mí',
+    icon: '💄',
     title: 'Sobre mí',
     subtitle: 'Tu Nombre · Desarrolladora de software',
     paragraphs: [
@@ -12,6 +13,7 @@ export const zones = {
   },
   experience: {
     label: 'Experiencia',
+    icon: '🦇',
     title: 'Experiencia profesional',
     subtitle: 'Mi recorrido',
     timeline: [
@@ -21,8 +23,9 @@ export const zones = {
   },
   skills: {
     label: 'Habilidades',
+    icon: '🏋️',
     title: 'Habilidades',
-    subtitle: 'Mi paleta de herramientas',
+    subtitle: 'Entrenando mis skills cada día',
     groups: [
       { name: 'Frontend', items: ['JavaScript', 'React', 'HTML/CSS'] },
       { name: '3D', items: ['Three.js', 'React Three Fiber', 'Blender'] },
@@ -31,8 +34,9 @@ export const zones = {
   },
   projects: {
     label: 'Proyectos',
+    icon: '🎧',
     title: 'Proyectos',
-    subtitle: 'Algunos de mis trabajos',
+    subtitle: 'Mi playlist de trabajos',
     projects: [
       { name: 'Proyecto 1', description: 'Descripción corta del proyecto y tu rol.', tags: ['React', 'API'], url: 'https://github.com/tu-usuario/proyecto-1' },
       { name: 'Proyecto 2', description: 'Descripción corta del proyecto y tu rol.', tags: ['Three.js'], url: 'https://github.com/tu-usuario/proyecto-2' },
@@ -41,8 +45,9 @@ export const zones = {
   },
   contact: {
     label: 'Contacto',
+    icon: '🍹',
     title: 'Contacto',
-    subtitle: '¡Trabajemos juntas!',
+    subtitle: '¡Trabajemos juntas! Ven por un cóctel virtual',
     paragraphs: ['Escríbeme o encuéntrame en mis redes.'],
     links: [
       { label: 'Correo', url: 'mailto:tu-correo@ejemplo.com' },

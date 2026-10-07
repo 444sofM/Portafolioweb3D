@@ -10,7 +10,7 @@ export default function LoadingScreen({ onEnter, entered, sceneReady }) {
   return (
     <div className={`loading ${entered ? 'loading--hidden' : ''}`} aria-hidden={entered}>
       <div className="loading__card">
-        <h1>Mi Isla Chic · Portafolio 3D</h1>
+        <h1>Isla Glam · Portafolio 3D</h1>
         <p className="loading__subtitle">Explora la isla para conocer mi trabajo.</p>
 
         <ul className="loading__controls">
