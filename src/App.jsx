@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Scene from './scenes/Scene.jsx'
 import LoadingScreen from './components/LoadingScreen.jsx'
+import Joystick from './components/Joystick.jsx'
 import ZonePanel from './components/ZonePanel.jsx'
 import { LabelsOverlay } from './components/Labels.jsx'
 
@@ -23,6 +24,7 @@ export default function App() {
         <Scene activeId={activeId} onSelect={setActiveId} />
       </Canvas>
       <LabelsOverlay activeId={activeId} onSelect={setActiveId} />
+      <Joystick />
       <ZonePanel zoneId={activeId} onClose={closePanel} />
       <LoadingScreen sceneReady={sceneReady} entered={entered} onEnter={() => setEntered(true)} />
     </>

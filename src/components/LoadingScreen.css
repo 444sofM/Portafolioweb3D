@@ -51,6 +51,51 @@
   transition: width 0.2s;
 }
 
+.loading__card h1 {
+  letter-spacing: 0.12em;
+  text-shadow: 0 0 16px #ff2d95;
+}
+
+.loading__bar-fill {
+  background: linear-gradient(90deg, #ff2d95, #ff9ad0);
+  box-shadow: 0 0 10px #ff2d95;
+}
+
+.loading__444 {
+  font-size: clamp(4rem, 22vw, 8rem);
+  font-weight: 800;
+  color: #ffd166;
+  animation: glow444 0.9s ease-in-out infinite alternate;
+}
+
+@keyframes glow444 {
+  from { text-shadow: 0 0 10px #ffd166, 0 0 25px #ff2d95; transform: scale(1); }
+  to { text-shadow: 0 0 30px #ffd166, 0 0 70px #ff2d95, 0 0 110px #ffd166; transform: scale(1.07); }
+}
+
+.joystick {
+  position: fixed;
+  left: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 209, 102, 0.8);
+  display: grid;
+  place-items: center;
+  touch-action: none;
+  z-index: 5;
+}
+
+.joystick-knob {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ff2d95;
+  box-shadow: 0 0 12px #ff7ac8;
+}
+
 .loading button {
   padding: 0.7rem 2rem;
   border: 0;

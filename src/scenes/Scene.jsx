@@ -4,6 +4,8 @@ import Island from './Island.jsx'
 import Sky, { SKY_HORIZON } from '../components/Sky.jsx'
 import { LabelProjector } from '../components/Labels.jsx'
 import CameraRig from '../components/CameraRig.jsx'
+import Neon444 from '../components/Neon444.jsx'
+import Player from '../components/Player.jsx'
 
 export default function Scene({ activeId, onSelect }) {
   return (
@@ -39,6 +41,8 @@ export default function Scene({ activeId, onSelect }) {
       </Environment>
 
       <Island activeId={activeId} onSelect={onSelect} />
+      <Neon444 />
+      <Player paused={activeId !== null} />
       <LabelProjector />
       <CameraRig activeId={activeId} />
       <Sparkles count={90} scale={[40, 9, 40]} position-y={5} size={5} speed={0.3} color="#ffd166" />
