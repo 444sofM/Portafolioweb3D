@@ -4,9 +4,9 @@ export const zones = {
     label: 'Sobre mí',
     icon: '💄',
     title: 'Sobre mí',
-    subtitle: 'Tu Nombre · Desarrolladora de software',
+    subtitle: 'Ana Sofia Mezu Vargas · Ingeniera de sistemas y computacion ',
     paragraphs: [
-      'Hola, soy Tu Nombre. Me apasiona crear experiencias web creativas e interactivas que combinan diseño y tecnología.',
+      'Hola, soy Tu Ana Sofia Mezu Vargas. Me apasiona crear experiencias web creativas e interactivas que combinan diseño y tecnología.',
       'Escribe aquí un párrafo sobre tu historia, tu formación y lo que te motiva.',
     ],
     chips: ['Creativa', 'Curiosa', 'Detallista'],
@@ -29,7 +29,7 @@ export const zones = {
     groups: [
       { name: 'Frontend', items: ['JavaScript', 'React', 'HTML/CSS'] },
       { name: '3D', items: ['Three.js', 'React Three Fiber', 'Blender'] },
-      { name: 'Herramientas', items: ['Git', 'Vite', 'Figma'] },
+      { name: 'Herramientas', items: ['Git', 'Vite', 'Taiga','Excel','Power bi'] },
     ],
   },
   projects: {
@@ -50,9 +50,9 @@ export const zones = {
     subtitle: '¡Trabajemos juntas! Ven por un cóctel virtual',
     paragraphs: ['Escríbeme o encuéntrame en mis redes.'],
     links: [
-      { label: 'Correo', url: 'mailto:tu-correo@ejemplo.com' },
+      { label: 'Correo', url: 'annamezu65@gmail.com' },
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/tu-usuario' },
-      { label: 'GitHub', url: 'https://github.com/tu-usuario' },
+      { label: 'GitHub', url: 'https://github.com/444sofM' },
     ],
   },
 }
