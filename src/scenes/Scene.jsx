@@ -4,6 +4,7 @@ import Island from './Island.jsx'
 import Sky, { SKY_HORIZON } from '../components/Sky.jsx'
 import { LabelProjector } from '../components/Labels.jsx'
 import CameraRig from '../components/CameraRig.jsx'
+import DrakeExtras from '../components/DrakeExtras.jsx'
 import Neon444 from '../components/Neon444.jsx'
 import Player from '../components/Player.jsx'
 
@@ -42,6 +43,7 @@ export default function Scene({ activeId, onSelect }) {
 
       <Island activeId={activeId} onSelect={onSelect} />
       <Neon444 />
+      <DrakeExtras />
       <Player paused={activeId !== null} />
       <LabelProjector />
       <CameraRig activeId={activeId} />
