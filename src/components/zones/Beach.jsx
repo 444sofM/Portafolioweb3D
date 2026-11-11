@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import { C, Lp, Gold, Neon } from '../lowpoly.jsx'
+import { Glass, Matcap } from '../materials.jsx'
 
 // Playa: sombrilla rosa, tumbona y cóctel gigante.
 function Umbrella() {
@@ -14,7 +15,7 @@ function Umbrella() {
         {Array.from({ length: slices }, (_, i) => (
           <mesh key={i} castShadow receiveShadow>
             <coneGeometry args={[2.3, 1.0, 1, 1, true, (i * Math.PI * 2) / slices, (Math.PI * 2) / slices]} />
-            <Lp color={i % 2 ? C.white : C.hotPink} side={THREE.DoubleSide} />
+            <Matcap color={i % 2 ? C.white : C.hotPink} shade="pearl" side={THREE.DoubleSide} />
           </mesh>
         ))}
         <mesh position-y={0.55}>
@@ -70,7 +71,7 @@ function GiantCocktail() {
       </mesh>
       <mesh position-y={2.35} castShadow>
         <cylinderGeometry args={[1.05, 0.1, 1.6, 8]} />
-        <meshStandardMaterial color={C.turq} flatShading transparent opacity={0.5} roughness={0.1} />
+        <Glass color={C.turq} opacity={0.5} flatShading />
       </mesh>
       <mesh position-y={2.15}>
         <cylinderGeometry args={[0.92, 0.1, 1.2, 8]} />

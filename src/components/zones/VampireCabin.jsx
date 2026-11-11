@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { C, Lp, Gold, Neon } from '../lowpoly.jsx'
+import { Wood } from '../materials.jsx'
 import { gableGeometry, batGeometry } from '../shapes.js'
 
 function Candle({ position, h = 0.6, r = 0.12 }) {
@@ -56,7 +57,7 @@ export default function VampireCabin() {
 
       <mesh position-y={1.1} castShadow receiveShadow>
         <boxGeometry args={[3.7, 2.2, 3.0]} />
-        <Lp color="#43195e" />
+        <Wood color="#7a3a9a" />
       </mesh>
       <mesh geometry={roof} position-y={2.2} castShadow receiveShadow>
         <Lp color="#1d1024" />

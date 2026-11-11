@@ -18,7 +18,7 @@ export function Lp({ color, rough = 0.65, metal = 0, ...rest }) {
 }
 
 export function Gold(props) {
-  return <Lp color={C.gold} rough={0.3} metal={0.7} {...props} />
+  return <Lp color={C.gold} rough={0.3} metal={0.7} envMapIntensity={1.2} {...props} />
 }
 
 // Material que brilla (con Bloom): toneMapped false permite superar el blanco.

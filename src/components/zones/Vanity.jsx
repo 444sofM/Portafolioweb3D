@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import * as THREE from 'three'
 import { C, Lp, Gold, Neon } from '../lowpoly.jsx'
+import { Glass, Matcap } from '../materials.jsx'
 import { heartShape } from '../shapes.js'
 
 function Lipstick({ color = C.fuchsia, position, scale = 1, tilt = 0 }) {
@@ -16,11 +17,11 @@ function Lipstick({ color = C.fuchsia, position, scale = 1, tilt = 0 }) {
       </mesh>
       <mesh position-y={1.15} castShadow>
         <cylinderGeometry args={[0.2, 0.2, 0.55, 8]} />
-        <Lp color={color} rough={0.35} />
+        <Matcap color={color} shade="glossy" />
       </mesh>
       <mesh position-y={1.52} rotation-z={0.25} castShadow>
         <coneGeometry args={[0.2, 0.32, 8]} />
-        <Lp color={color} rough={0.35} />
+        <Matcap color={color} shade="glossy" />
       </mesh>
     </group>
   )
@@ -105,7 +106,7 @@ export default function Vanity() {
       <Lipstick position={[1.5, 1.69, 0.15]} scale={0.7} color={C.hotPink} tilt={-0.25} />
       <mesh position={[0.6, 1.95, 0.1]} castShadow>
         <cylinderGeometry args={[0.3, 0.38, 0.55, 6]} />
-        <meshStandardMaterial color="#ffd0ee" flatShading transparent opacity={0.75} roughness={0.1} />
+        <Glass color="#ffd0ee" opacity={0.75} flatShading />
       </mesh>
       <mesh position={[0.6, 2.35, 0.1]} castShadow>
         <icosahedronGeometry args={[0.16, 0]} />

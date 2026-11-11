@@ -4,7 +4,6 @@ import { Text } from '@react-three/drei'
 import { C, Lp, Gold, Neon } from './lowpoly.jsx'
 import { facingCenter } from '../data/layout.js'
 import { terrainHeight } from './Terrain.jsx'
-import { playerPos } from './Player.jsx'
 
 function place(x, z) {
   return { position: [x, terrainHeight(x, z), z], rotation: [0, facingCenter(x, z), 0] }
@@ -66,15 +65,14 @@ function ScorpionSign({ x, z }) {
   )
 }
 
-// Cabina telefónica retro: el teléfono rosa "suena" al acercarse
+// Cabina telefónica retro: el teléfono rosa "suena" a intervalos
 function PhoneBooth({ x, z }) {
   const phone = useRef()
   const glow = useRef()
 
   useFrame(({ clock }) => {
-    const d = Math.hypot(playerPos.x - x, playerPos.z - z)
-    const ringing = d < 4.5
     const t = clock.elapsedTime
+    const ringing = t % 7 < 2
     phone.current.rotation.z = ringing ? Math.sin(t * 40) * 0.18 : 0
     glow.current.intensity = ringing ? 8 + Math.sin(t * 20) * 5 : 1
   })
